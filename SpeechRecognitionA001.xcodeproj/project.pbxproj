@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,22 @@
 		AA80F4B725533DE900E57B3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA80F4B525533DE900E57B3C /* Main.storyboard */; };
 		AA80F4B925533DEA00E57B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA80F4B825533DEA00E57B3C /* Assets.xcassets */; };
 		AA80F4BC25533DEA00E57B3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA80F4BA25533DEA00E57B3C /* LaunchScreen.storyboard */; };
+		AA80F4CA25534E9700E57B3C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AA80F4C925534E9700E57B3C /* Kingfisher */; };
+		AA80F4CC25534E9700E57B3C /* KingfisherStatic in Frameworks */ = {isa = PBXBuildFile; productRef = AA80F4CB25534E9700E57B3C /* KingfisherStatic */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA80F4CD25534E9700E57B3C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AA80F4AC25533DE900E57B3C /* SpeechRecognitionA001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognitionA001.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA80F4CA25534E9700E57B3C /* Kingfisher in Frameworks */,
+				AA80F4CC25534E9700E57B3C /* KingfisherStatic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +94,17 @@
 				AA80F4A825533DE900E57B3C /* Sources */,
 				AA80F4A925533DE900E57B3C /* Frameworks */,
 				AA80F4AA25533DE900E57B3C /* Resources */,
+				AA80F4CD25534E9700E57B3C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SpeechRecognitionA001;
+			packageProductDependencies = (
+				AA80F4C925534E9700E57B3C /* Kingfisher */,
+				AA80F4CB25534E9700E57B3C /* KingfisherStatic */,
+			);
 			productName = SpeechRecognitionA001;
 			productReference = AA80F4AC25533DE900E57B3C /* SpeechRecognitionA001.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +132,9 @@
 				Base,
 			);
 			mainGroup = AA80F4A325533DE900E57B3C;
+			packageReferences = (
+				AA80F4C525534E9700E57B3C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = AA80F4AD25533DE900E57B3C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4WHYADYH2;
 				INFOPLIST_FILE = SpeechRecognitionA001/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4WHYADYH2;
 				INFOPLIST_FILE = SpeechRecognitionA001/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +368,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA80F4C525534E9700E57B3C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA80F4C925534E9700E57B3C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA80F4C525534E9700E57B3C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		AA80F4CB25534E9700E57B3C /* KingfisherStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA80F4C525534E9700E57B3C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherStatic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA80F4A425533DE900E57B3C /* Project object */;
 }
